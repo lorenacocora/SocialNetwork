@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-radius: 20; -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #9370DB, #F08080);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.ControllerRequestsMenu">
+   <top>
+      <ButtonBar buttonMinWidth="0.0" prefHeight="37.0" prefWidth="570.0" BorderPane.alignment="CENTER">
+         <buttons>
+                <Button fx:id="buttonReturn" mnemonicParsing="false" onAction="#handleReturn" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="Return" textFill="ffebcd">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+              <Button fx:id="buttonClose" maxWidth="26.4" minWidth="0.0" mnemonicParsing="false" onAction="#handleClose" prefHeight="27.0" style="-fx-background-color: transparent;  -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="X" textFill="#ffebcd">
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <font>
+                      <Font name="System Bold" size="12.0" />
+                  </font>
+              </Button>
+         </buttons>
+         <BorderPane.margin>
+            <Insets right="10.0" top="5.0" />
+         </BorderPane.margin>
+      </ButtonBar>
+   </top>
+   <right>
+      <VBox prefHeight="308.0" prefWidth="292.0" BorderPane.alignment="CENTER">
+         <children>
+                <TextField fx:id="textFieldFrom" prefHeight="27.0" prefWidth="211.0" promptText="From" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="120.0" />
+               </VBox.margin>
+                </TextField>
+                <TextField fx:id="textFieldTo" prefHeight="12.0" prefWidth="324.0" promptText="To" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;">
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </TextField>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="580.0">
+               <children>
+                      <Button fx:id="buttonAccept" mnemonicParsing="false" onAction="#handleAccept" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="Accept" textFill="ffebcd">
+                        <font>
+                            <Font name="System Bold" size="12.0" />
+                        </font>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                      </Button>
+                  <Button fx:id="buttonReject" mnemonicParsing="false" onAction="#handleReject" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="Reject" textFill="ffebcd">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                      <font>
+                          <Font name="System Bold" size="12.0" />
+                      </font>
+                      <cursor>
+                          <Cursor fx:constant="HAND" />
+                      </cursor>
+                  </Button>
+                  <Button fx:id="buttonCancel" mnemonicParsing="false" onAction="#handleCancel" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="Cancel" textFill="ffebcd">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                      <font>
+                          <Font name="System Bold" size="12.0" />
+                      </font>
+                      <cursor>
+                          <Cursor fx:constant="HAND" />
+                      </cursor>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets right="35.0" top="50.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <left>
+      <VBox prefHeight="358.0" prefWidth="252.0" BorderPane.alignment="CENTER">
+         <children>
+                <ScrollPane fx:id="scrollPane" prefHeight="348.0" prefWidth="261.0">
+                    <content>
+                        <VBox fx:id="requestsBox" prefHeight="617.0" prefWidth="235.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #9370DB, #F08080);" />
+                    </content>
+                </ScrollPane>
+            <HBox prefHeight="41.0" prefWidth="252.0">
+               <children>
+                  <Button fx:id="buttonPrev" mnemonicParsing="false" onAction="#handlePrev" prefHeight="26.0" prefWidth="198.0" style="-fx-background-color: transparent;  -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="Prev" textFill="#ffebcd">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                      <font>
+                          <Font name="System Bold" size="12.0" />
+                      </font>
+                      <cursor>
+                          <Cursor fx:constant="HAND" />
+                      </cursor>
+                  </Button>
+                  <Button fx:id="buttonNext" mnemonicParsing="false" onAction="#handleNext" prefHeight="26.0" prefWidth="194.0" style="-fx-background-color: transparent;  -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="Next" textFill="#ffebcd">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                      <font>
+                          <Font name="System Bold" size="12.0" />
+                      </font>
+                      <cursor>
+                          <Cursor fx:constant="HAND" />
+                      </cursor>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+</BorderPane>

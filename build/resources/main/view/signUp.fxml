@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="328.0" prefWidth="507.0" style="-fx-background-radius: 20; -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #9370DB, #F08080);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.ControllerSignUp">
+    <center>
+        <VBox alignment="CENTER" fillWidth="false" prefHeight="193.0" prefWidth="300.0">
+            <children>
+                <TextField fx:id="usernameField" alignment="CENTER" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </TextField>
+                <PasswordField fx:id="passwordField" alignment="CENTER" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </PasswordField>
+            <TextField fx:id="firstnameField" alignment="CENTER" promptText="Firstname" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="lastnameField" alignment="CENTER" promptText="Lastname" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0">
+              <buttons>
+                <Button fx:id="buttonSignUp" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="27.0" prefWidth="197.0" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="Sign Up" textFill="#ffebcd">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                  <Button fx:id="buttonCancel" mnemonicParsing="false" onAction="#handleCancel" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="Cancel" textFill="ffebcd">
+                      <VBox.margin>
+                          <Insets top="10.0" />
+                      </VBox.margin>
+                      <font>
+                          <Font name="System Bold" size="12.0" />
+                      </font>
+                      <cursor>
+                          <Cursor fx:constant="HAND" />
+                      </cursor>
+                  </Button>
+              </buttons>
+               <VBox.margin>
+                  <Insets right="15.0" top="20.0" />
+               </VBox.margin>
+            </ButtonBar>
+            </children>
+            <BorderPane.margin>
+                <Insets top="10.0" />
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </VBox>
+    </center>
+    <top>
+        <Button fx:id="buttonClose" mnemonicParsing="false" onAction="#handleClose" style="-fx-background-color: transparent;  -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="X" textFill="#ffebcd" BorderPane.alignment="CENTER_RIGHT">
+            <BorderPane.margin>
+                <Insets right="15.0" top="10.0" />
+            </BorderPane.margin>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+    </top>
+</BorderPane>

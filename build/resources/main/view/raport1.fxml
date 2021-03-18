@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-radius: 20; -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #9370DB, #F08080);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.ControllerRaport1">
+    <top>
+        <ButtonBar buttonMinWidth="0.0" prefHeight="32.0" prefWidth="610.0" BorderPane.alignment="CENTER">
+            <buttons>
+                <Button fx:id="buttonReturn" mnemonicParsing="false" onAction="#handleReturn" prefHeight="27.0" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="Return" textFill="#ffebcd">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="buttonClose" maxWidth="26.4" minWidth="0.0" mnemonicParsing="false" onAction="#handleClose" prefHeight="27.0" style="-fx-background-color: transparent;  -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="X" textFill="#ffebcd">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+            </buttons>
+            <BorderPane.margin>
+                <Insets right="10.0" top="5.0" />
+            </BorderPane.margin>
+        </ButtonBar>
+    </top>
+   <bottom>
+      <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#handleSave" prefHeight="26.0" prefWidth="578.0" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="Save as pdf" textFill="#ffebcd" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+          <font>
+              <Font name="System Bold" size="12.0" />
+          </font>
+          <cursor>
+              <Cursor fx:constant="HAND" />
+          </cursor>
+      </Button>
+   </bottom>
+   <left>
+      <VBox prefHeight="415.0" prefWidth="357.0" BorderPane.alignment="CENTER">
+         <children>
+            <PieChart fx:id="messagesChart" prefHeight="0.0" prefWidth="191.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </PieChart>
+            <Label fx:id="messagesLabel" alignment="TOP_CENTER" prefHeight="66.0" prefWidth="358.0" textFill="#ffebcd">
+             <font>
+                 <Font name="System Bold" size="12.0" />
+             </font>
+            </Label>
+              <ScrollPane fx:id="scrollPaneMessages" prefHeight="262.0" prefWidth="345.0">
+                  <content>
+                      <VBox fx:id="messagesBox" prefHeight="1919.0" prefWidth="321.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #9370DB, #F08080);" />
+                  </content>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+              </ScrollPane>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="427.0" prefWidth="322.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="friendsLabel" alignment="TOP_CENTER" prefHeight="70.0" prefWidth="322.0" textFill="#ffebcd">
+             <font>
+                 <Font name="System Bold" size="12.0" />
+             </font>
+            </Label>
+             <ScrollPane fx:id="scrollPaneFriends" prefHeight="381.0" prefWidth="322.0">
+                 <content>
+                     <VBox fx:id="friendsBox" prefHeight="1994.0" prefWidth="305.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #9370DB, #F08080);" />
+                 </content>
+             </ScrollPane>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+</BorderPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-radius: 20; -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #9370DB, #F08080);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.ControllerConversation">
+    <top>
+        <ButtonBar buttonMinWidth="0.0" prefHeight="32.0" prefWidth="610.0" BorderPane.alignment="CENTER">
+            <buttons>
+                <Button fx:id="buttonReturn" mnemonicParsing="false" onAction="#handleReturn" prefHeight="27.0" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="Return" textFill="#ffebcd">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="buttonClose" maxWidth="26.4" minWidth="0.0" mnemonicParsing="false" onAction="#handleClose" prefHeight="27.0" style="-fx-background-color: transparent;  -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="X" textFill="#ffebcd">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+            </buttons>
+            <BorderPane.margin>
+                <Insets right="10.0" top="5.0" />
+            </BorderPane.margin>
+        </ButtonBar>
+    </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+              <ScrollPane fx:id="scrollPane" prefHeight="369.0" prefWidth="579.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+               <content>
+                  <VBox fx:id="messagesBox" prefHeight="356.0" prefWidth="662.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #9370DB, #F08080);">
+                     <children>
+                        <HBox prefHeight="330.0" prefWidth="596.0">
+                           <children>
+                              <VBox fx:id="leftBox" prefHeight="330.0" prefWidth="418.0" />
+                              <VBox fx:id="rightBox" prefHeight="330.0" prefWidth="380.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+              </ScrollPane>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="textFieldMessage" prefHeight="27.0" prefWidth="613.0" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                      <font>
+                          <Font name="System Bold" size="12.0" />
+                      </font>
+                  </TextField>
+                  <Button fx:id="buttonSend" mnemonicParsing="false" onAction="#handleSend" prefHeight="27.0" prefWidth="56.0" style="-fx-background-color: transparent; -fx-border-color: #ffebcd; -fx-border-radius: 10;" text="Send" textFill="#ffebcd">
+                      <font>
+                          <Font name="System Bold" size="12.0" />
+                      </font>
+                      <cursor>
+                          <Cursor fx:constant="HAND" />
+                      </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
